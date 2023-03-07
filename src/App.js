@@ -15,7 +15,7 @@ function App() {
 
 
   // should not change the LOGIC inside this function - you can make changes to the function but logic should NOT change
-  const delayedValue = useMemo(()=> {
+  const delayedValue =  useMemo(()=> {
     console.log("Delay Function Ran")
     for(let index=0; index<LARGE_NUMBER; index++){};
     return value+2;
@@ -23,7 +23,7 @@ function App() {
   },[value])
 
   // should not change the LOGIC inside this function - you can make changes to the function but logic should NOT change
-  const testFunction = useMemo(()=>{
+  const testFunction = useCallback(()=>{
     return [value*3 ,value*4]
   },[value])
 
